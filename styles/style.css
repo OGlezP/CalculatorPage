@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+body{
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#title-head {
+  color: lightgrey;
+  letter-spacing: 5px;
+}
+
+#contenedor-display {
+  padding: 17px 25px 30px 25px;
+  width: 350px;
+  border-radius: 15px 15px 5px 5px;
+  background-image: -webkit-linear-gradient(top, #3d4543, #2f2a2f);
+  box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+#display {
+  color: 	#696969;
+  font-size: 29px;
+  padding: 7px;
+  width: 100%;
+  height: 50px;
+  text-align: right;
+  border: #696969 2px solid;
+  border-radius: 8px;
+  -webkit-box-shadow: inset rgba(0,0,0,1) 1px 2px 8px;
+  background-image: -webkit-linear-gradient(top, #696969 0%, #696969 100%);
+  background: #bccd95;
+}
+
+#contenedor-principal {
+  padding: 35px;
+  height: 400px;
+  width: 350px;
+  border-radius: 5px 5px 15px 15px;
+  background-image: -webkit-linear-gradient(top, #3d4543, #2f2a2f);
+  box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+#contenedor-botones {
+  background-color: #d3d3d3;
+  padding: 4px 20px 5px;
+  width: 100%;
+  border-radius: 3px;
+  border: white 1px solid;
+}
+
+.tecla {
+  background-color: black;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  width: 54px;
+  height: 50px;
+  margin: 6px;
+
+}
+
+.ac, .del{
+  background: #8b0000;
+  color: #fff;
+}
+
+.tecla:focus {
+  outline: none;
+}

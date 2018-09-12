@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+$title-head: #CDCFD1;
+$display-border-text: #696969;
+$background-display: #bccd95;
+$contenedor-botones: #d3d3d3;
+$background-tecla: #141414;
+$back-AC-DEL: #8b0000;
+
+@mixin body-back-shadow() {
+  background-image: -webkit-linear-gradient(top, #3d4543, #2f2a2f);
+  background-image: -ms-linear-gradient(top, #3d4543, #2f2a2f);
+  background-image: -moz-linear-gradient(top, #3d4543, #2f2a2f);
+  box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+body{
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#contenedor-display {
+  padding: 17px 25px 30px 25px;
+  width: 350px;
+  border-radius: 15px 15px 5px 5px;
+  @include body-back-shadow();
+  #title-head {
+    color: $title-head;
+    letter-spacing: 5px;
+  }
+  #display {
+    color: 	$display-border-text;
+    font-size: 29px;
+    padding: 7px;
+    width: 100%;
+    height: 50px;
+    text-align: right;
+    border: $display-border-text 2px solid;
+    border-radius: 8px;
+    box-shadow: inset rgba(0,0,0,1) 1px 2px 8px;
+    background-image: -webkit-linear-gradient(top, #696969 0%, #696969 100%);
+    background-image: -ms-linear-gradient(top, #696969 0%, #696969 100%);
+    background-image: -moz-linear-gradient(top, #696969 0%, #696969 100%);
+    background: $background-display;
+  }
+}
+
+#contenedor-principal {
+  padding: 35px;
+  width: 350px;
+  border-radius: 5px 5px 15px 15px;
+  @include body-back-shadow();
+  #contenedor-botones {
+    background-color: $contenedor-botones;
+    padding: 4px 20px 5px;
+    width: 100%;
+    border-radius: 3px;
+    .tecla {
+      background-color: $background-tecla;
+      font-size: 20px;
+      font-weight: bold;
+      color: $display-border-text;
+      width: 54px;
+      height: 50px;
+      margin: 6px;
+    }
+    .ac, .del{
+      background-color: $back-AC-DEL;
+    }
+    .tecla:focus {
+      outline: none;
+    }
+  }
+}
